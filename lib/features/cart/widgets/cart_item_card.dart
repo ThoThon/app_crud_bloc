@@ -129,6 +129,7 @@ class CartItemCard extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
+              // Sử dụng parentContext để truy cập CartCubit
               BlocProvider.of<CartCubit>(parentContext)
                   .removeFromCart(cartItem.productId);
               Navigator.pop(dialogContext);
