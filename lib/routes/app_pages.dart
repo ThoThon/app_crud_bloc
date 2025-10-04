@@ -12,8 +12,10 @@ class AppPages {
     switch (settings.name) {
       case Routes.login:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
+
       case Routes.home:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
+
       case Routes.cart:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
@@ -21,6 +23,7 @@ class AppPages {
             child: const CartScreen(),
           ),
         );
+
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(
